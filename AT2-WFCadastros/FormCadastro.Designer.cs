@@ -31,19 +31,22 @@
             lblCodigo = new Label();
             txtCodigo = new TextBox();
             gbxStatus = new GroupBox();
-            rdbAtivo = new RadioButton();
             rdbInativo = new RadioButton();
+            rdbAtivo = new RadioButton();
             txtNome = new TextBox();
             label1 = new Label();
             lblDescricao = new Label();
-            textBox1 = new TextBox();
+            txtDescricao = new TextBox();
+            txtCategoria = new TextBox();
+            lblCategoria = new Label();
+            btnCadastrar = new Button();
             gbxStatus.SuspendLayout();
             SuspendLayout();
             // 
             // lblCodigo
             // 
             lblCodigo.AutoSize = true;
-            lblCodigo.Location = new Point(25, 29);
+            lblCodigo.Location = new Point(25, 93);
             lblCodigo.Name = "lblCodigo";
             lblCodigo.Size = new Size(49, 15);
             lblCodigo.TabIndex = 0;
@@ -51,33 +54,23 @@
             // 
             // txtCodigo
             // 
-            txtCodigo.Location = new Point(25, 47);
+            txtCodigo.Location = new Point(25, 111);
             txtCodigo.Name = "txtCodigo";
             txtCodigo.ReadOnly = true;
             txtCodigo.Size = new Size(100, 23);
             txtCodigo.TabIndex = 1;
+            txtCodigo.TabStop = false;
             // 
             // gbxStatus
             // 
             gbxStatus.Controls.Add(rdbInativo);
             gbxStatus.Controls.Add(rdbAtivo);
-            gbxStatus.Location = new Point(170, 12);
+            gbxStatus.Location = new Point(170, 93);
             gbxStatus.Name = "gbxStatus";
             gbxStatus.Size = new Size(198, 58);
             gbxStatus.TabIndex = 2;
             gbxStatus.TabStop = false;
             gbxStatus.Text = "Status";
-            // 
-            // rdbAtivo
-            // 
-            rdbAtivo.AutoSize = true;
-            rdbAtivo.Location = new Point(17, 22);
-            rdbAtivo.Name = "rdbAtivo";
-            rdbAtivo.Size = new Size(53, 19);
-            rdbAtivo.TabIndex = 0;
-            rdbAtivo.TabStop = true;
-            rdbAtivo.Text = "Ativo";
-            rdbAtivo.UseVisualStyleBackColor = true;
             // 
             // rdbInativo
             // 
@@ -86,13 +79,22 @@
             rdbInativo.Name = "rdbInativo";
             rdbInativo.Size = new Size(61, 19);
             rdbInativo.TabIndex = 1;
-            rdbInativo.TabStop = true;
             rdbInativo.Text = "Inativo";
             rdbInativo.UseVisualStyleBackColor = true;
             // 
+            // rdbAtivo
+            // 
+            rdbAtivo.AutoSize = true;
+            rdbAtivo.Location = new Point(17, 22);
+            rdbAtivo.Name = "rdbAtivo";
+            rdbAtivo.Size = new Size(53, 19);
+            rdbAtivo.TabIndex = 0;
+            rdbAtivo.Text = "Ativo";
+            rdbAtivo.UseVisualStyleBackColor = true;
+            // 
             // txtNome
             // 
-            txtNome.Location = new Point(25, 130);
+            txtNome.Location = new Point(25, 168);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(343, 23);
             txtNome.TabIndex = 3;
@@ -100,7 +102,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(25, 112);
+            label1.Location = new Point(25, 150);
             label1.Name = "label1";
             label1.Size = new Size(106, 15);
             label1.TabIndex = 4;
@@ -109,26 +111,55 @@
             // lblDescricao
             // 
             lblDescricao.AutoSize = true;
-            lblDescricao.Location = new Point(25, 167);
+            lblDescricao.Location = new Point(25, 205);
             lblDescricao.Name = "lblDescricao";
             lblDescricao.Size = new Size(124, 15);
             lblDescricao.TabIndex = 5;
             lblDescricao.Text = "Descrição do Produto:";
             // 
-            // textBox1
+            // txtDescricao
             // 
-            textBox1.Location = new Point(25, 185);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(343, 137);
-            textBox1.TabIndex = 6;
+            txtDescricao.Location = new Point(25, 223);
+            txtDescricao.Multiline = true;
+            txtDescricao.Name = "txtDescricao";
+            txtDescricao.Size = new Size(343, 137);
+            txtDescricao.TabIndex = 6;
+            // 
+            // txtCategoria
+            // 
+            txtCategoria.Location = new Point(25, 58);
+            txtCategoria.Name = "txtCategoria";
+            txtCategoria.Size = new Size(343, 23);
+            txtCategoria.TabIndex = 7;
+            // 
+            // lblCategoria
+            // 
+            lblCategoria.AutoSize = true;
+            lblCategoria.Location = new Point(25, 41);
+            lblCategoria.Name = "lblCategoria";
+            lblCategoria.Size = new Size(124, 15);
+            lblCategoria.TabIndex = 8;
+            lblCategoria.Text = "Categoria do Produto:";
+            // 
+            // btnCadastrar
+            // 
+            btnCadastrar.Location = new Point(263, 380);
+            btnCadastrar.Name = "btnCadastrar";
+            btnCadastrar.Size = new Size(105, 58);
+            btnCadastrar.TabIndex = 9;
+            btnCadastrar.Text = "Cadastrar";
+            btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += btnCadastrar_Click;
             // 
             // FormCadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(392, 450);
-            Controls.Add(textBox1);
+            Controls.Add(btnCadastrar);
+            Controls.Add(lblCategoria);
+            Controls.Add(txtCategoria);
+            Controls.Add(txtDescricao);
             Controls.Add(lblDescricao);
             Controls.Add(label1);
             Controls.Add(txtNome);
@@ -141,6 +172,7 @@
             Name = "FormCadastro";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormCadastro";
+            Load += FormCadastro_Load;
             gbxStatus.ResumeLayout(false);
             gbxStatus.PerformLayout();
             ResumeLayout(false);
@@ -157,6 +189,9 @@
         private TextBox txtNome;
         private Label label1;
         private Label lblDescricao;
-        private TextBox textBox1;
+        private TextBox txtDescricao;
+        private TextBox txtCategoria;
+        private Label lblCategoria;
+        private Button btnCadastrar;
     }
 }

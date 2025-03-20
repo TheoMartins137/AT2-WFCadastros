@@ -6,5 +6,22 @@ namespace AT2_WFCadastros
         {
             InitializeComponent();
         }
+
+        private void mnuCadastrar_Click(object sender, EventArgs e)
+        {
+            FormCadastro form = new FormCadastro();
+            form.ShowDialog();
+        }
+
+        private void mnuListar_Click(object sender, EventArgs e)
+        {
+            FormListar form = new FormListar();
+            form.ShowDialog();
+        }
+
+        private void mnuSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

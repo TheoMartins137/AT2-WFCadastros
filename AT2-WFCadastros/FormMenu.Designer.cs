@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             menuStrip1 = new MenuStrip();
             mnuCadastrar = new ToolStripMenuItem();
             mnuListar = new ToolStripMenuItem();
             mnuSair = new ToolStripMenuItem();
+            pictureBox1 = new PictureBox();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -49,18 +52,32 @@
             mnuCadastrar.Name = "mnuCadastrar";
             mnuCadastrar.Size = new Size(69, 20);
             mnuCadastrar.Text = "Cadastrar";
+            mnuCadastrar.Click += mnuCadastrar_Click;
             // 
             // mnuListar
             // 
             mnuListar.Name = "mnuListar";
             mnuListar.Size = new Size(47, 20);
             mnuListar.Text = "Listar";
+            mnuListar.Click += mnuListar_Click;
             // 
             // mnuSair
             // 
             mnuSair.Name = "mnuSair";
             mnuSair.Size = new Size(38, 20);
             mnuSair.Text = "Sair";
+            mnuSair.Click += mnuSair_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 24);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(498, 305);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
             // 
             // FormMenu
             // 
@@ -68,14 +85,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             ClientSize = new Size(498, 329);
+            Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormMenu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormMenu";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -86,5 +106,6 @@
         private ToolStripMenuItem mnuCadastrar;
         private ToolStripMenuItem mnuListar;
         private ToolStripMenuItem mnuSair;
+        private PictureBox pictureBox1;
     }
 }
