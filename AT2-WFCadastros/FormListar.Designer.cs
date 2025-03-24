@@ -38,14 +38,14 @@
             dgvListar.Dock = DockStyle.Fill;
             dgvListar.Location = new Point(0, 0);
             dgvListar.Name = "dgvListar";
-            dgvListar.Size = new Size(631, 276);
+            dgvListar.Size = new Size(583, 276);
             dgvListar.TabIndex = 0;
             // 
             // FormListar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(631, 276);
+            ClientSize = new Size(583, 276);
             Controls.Add(dgvListar);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximizeBox = false;

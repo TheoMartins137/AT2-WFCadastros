@@ -23,5 +23,10 @@ namespace AT2_WFCadastros
         {
             this.Close();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
