@@ -25,7 +25,6 @@ namespace AT2_WFCadastros
         public void Limpar()
         {
             txtCategoria.Text = "";
-            txtNome.Text = "";
             txtDescricao.Text = "";
             rdbAtivo.Checked = false;
             rdbInativo.Checked = false;
@@ -37,13 +36,7 @@ namespace AT2_WFCadastros
 
             if (txtCategoria.Text == "")
             {
-                Erro("Campo de Categoria não pode estar Vazio");
-                return;
-            }
-
-            if (txtNome.Text == "")
-            {
-                Erro("Campo de Nome não pode estar Vazio");
+                Erro("Campo de Nome da Categoria não pode estar Vazio");
                 return;
             }
 
@@ -61,7 +54,6 @@ namespace AT2_WFCadastros
 
             Produtos Categoria = new Produtos();
             Categoria.Categoria = txtCategoria.Text;
-            Categoria.Nome = txtNome.Text;
             Categoria.Codigo = Convert.ToInt32(txtCodigo.Text);
             if (rdbAtivo.Checked == true)
             {

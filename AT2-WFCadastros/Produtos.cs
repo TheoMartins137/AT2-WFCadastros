@@ -8,10 +8,9 @@ namespace AT2_WFCadastros
 {
     public class Produtos
     {
-        public Produtos(int codigo, string? nome, string? descricao, string? ativo, DateTime dtCadastro, string? categoria)
+        public Produtos(int codigo, string? descricao, string? ativo, DateTime dtCadastro, string? categoria)
         {
             Codigo = codigo;
-            Nome = nome;
             Descricao = descricao;
             Ativo = ativo;
             DtCadastro = dtCadastro;
@@ -21,7 +20,6 @@ namespace AT2_WFCadastros
         public Produtos () { }
 
         public int Codigo { get; set; }
-        public string? Nome { get; set; }
         public string? Descricao { get; set; }
         public string? Ativo { get; set; }
         public DateTime DtCadastro { get; set; }

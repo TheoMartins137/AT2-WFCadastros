@@ -33,8 +33,6 @@
             gbxStatus = new GroupBox();
             rdbInativo = new RadioButton();
             rdbAtivo = new RadioButton();
-            txtNome = new TextBox();
-            label1 = new Label();
             lblDescricao = new Label();
             txtDescricao = new TextBox();
             txtCategoria = new TextBox();
@@ -92,34 +90,18 @@
             rdbAtivo.Text = "Ativo";
             rdbAtivo.UseVisualStyleBackColor = true;
             // 
-            // txtNome
-            // 
-            txtNome.Location = new Point(25, 168);
-            txtNome.Name = "txtNome";
-            txtNome.Size = new Size(343, 23);
-            txtNome.TabIndex = 3;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(25, 150);
-            label1.Name = "label1";
-            label1.Size = new Size(106, 15);
-            label1.TabIndex = 4;
-            label1.Text = "Nome do Produto:";
-            // 
             // lblDescricao
             // 
             lblDescricao.AutoSize = true;
-            lblDescricao.Location = new Point(25, 205);
+            lblDescricao.Location = new Point(25, 163);
             lblDescricao.Name = "lblDescricao";
-            lblDescricao.Size = new Size(124, 15);
+            lblDescricao.Size = new Size(131, 15);
             lblDescricao.TabIndex = 5;
-            lblDescricao.Text = "Descrição do Produto:";
+            lblDescricao.Text = "Descrição da Categoria:";
             // 
             // txtDescricao
             // 
-            txtDescricao.Location = new Point(25, 223);
+            txtDescricao.Location = new Point(25, 181);
             txtDescricao.Multiline = true;
             txtDescricao.Name = "txtDescricao";
             txtDescricao.Size = new Size(343, 137);
@@ -137,13 +119,13 @@
             lblCategoria.AutoSize = true;
             lblCategoria.Location = new Point(25, 41);
             lblCategoria.Name = "lblCategoria";
-            lblCategoria.Size = new Size(124, 15);
+            lblCategoria.Size = new Size(113, 15);
             lblCategoria.TabIndex = 8;
-            lblCategoria.Text = "Categoria do Produto:";
+            lblCategoria.Text = "Nome da Categoria:";
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Location = new Point(263, 380);
+            btnCadastrar.Location = new Point(263, 344);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(105, 58);
             btnCadastrar.TabIndex = 9;
@@ -161,8 +143,6 @@
             Controls.Add(txtCategoria);
             Controls.Add(txtDescricao);
             Controls.Add(lblDescricao);
-            Controls.Add(label1);
-            Controls.Add(txtNome);
             Controls.Add(gbxStatus);
             Controls.Add(txtCodigo);
             Controls.Add(lblCodigo);
@@ -186,8 +166,6 @@
         private GroupBox gbxStatus;
         private RadioButton rdbInativo;
         private RadioButton rdbAtivo;
-        private TextBox txtNome;
-        private Label label1;
         private Label lblDescricao;
         private TextBox txtDescricao;
         private TextBox txtCategoria;
